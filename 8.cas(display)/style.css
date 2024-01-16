@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 
+.prvi {
+  background-color: red;
+  display: block;
+}
+
+.drugi {
+  background-color: green;
+  display: inline;
+}
+
+.drugi p {
+  display: inline;
+}
+
+.treci {
+  background-color: yellow;
+  display: inline-block;
+} */
+
+.main-container {
+  width: 600px;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.left {
+  background-color: blue;
+  height: 30px;
+  width: 80px;
+}
+
+.right {
+  background-color: yellow;
+  height: 30px;
+  width: 80px;
+}
