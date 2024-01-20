@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-card {
+  height: 350px;
+  width: 900px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  background-color: #f0f6ff;
+}
+
+.card-image {
+  width: 35%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image .heart {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info-title {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.card-info-title i {
+  color: orange;
+}
+
+.card-info-title p {
+  font-size: 20px;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card-info-review {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-text {
+  font-size: 20px;
+  text-align: end;
+}
+
+.ocena {
+  background-color: darkblue;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px 10px 10px 0;
+}
+
+.card-info-review button {
+  background-color: royalblue;
+  color: white;
+  padding: 10px 0;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
