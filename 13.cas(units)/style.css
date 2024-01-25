@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.centimetri {
+  font-size: 5cm;
+}
+
+.milimetri {
+  font-size: 5mm;
+}
+
+.inci {
+  font-size: 5in;
+}
+
+.pixeli {
+  font-size: 5px;
+}
+
+.em {
+  font-size: 2em;
+  /* margin-left: 1em; */
+}
+
+div {
+  font-size: 40px;
+  height: 300px;
+  width: 300vw;
+  background-color: red;
+  /* transition: 1s; */
+  /* opacity: 1; */
+  /* visibility: hidden; */
+  /* display: none; */
+  /* overflow-y: scroll; */
+}
+
+p {
+  width: 500px;
+}
+
+div:hover {
+  /* opacity: 0.3; */
+  /* background-color: blue; */
+  /* height: 100px; */
+  /* width: 100px; */
+
+  cursor: pointer;
+}
