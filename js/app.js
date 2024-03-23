@@ -192,4 +192,56 @@ const d = "aldin";
 //   console.log(ime + " " + prezime);
 // }
 
-//////////////////////////////////////////////////////////
+/////////////////////// LOOPS ///////////////////////////////////
+
+// console.log(3);
+// console.log(3);
+// console.log(3);
+// console.log(3);
+// console.log(3);
+
+// FOR LOOP
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i, "broj je paran");
+//   } else {
+//     console.log(i, "broj je neparan");
+//   }
+// }
+
+// for (let i = 20; i > 0; i--) {
+//   console.log(i);
+// }
+
+// FizzBuzz challenge;
+
+// deljiv sa 3 -> FIZZ;
+// deljiv sa 5 -> BUZZ;
+// deljiv i sa 3 i sa 5 -> FizzBuzz;
+// ostale brojeve ispisati
+
+// let i = 20;
+
+// do {
+//   console.log(i);
+//   i++;
+// } while (i < 10);
+
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+// }
+
+const randomNumber = Math.floor(Math.random() * 20);
+let myNumber = prompt("Guess the number from 0 to 20 :)");
+
+while (+myNumber !== randomNumber) {
+  myNumber = prompt("Guess again");
+}
+
+alert("U are correct, number is: " + randomNumber);
