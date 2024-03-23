@@ -111,6 +111,85 @@ const d = "aldin";
 
 // or operator
 
-console.log(false || !false);
+// console.log(false || !false);
 
-console.log(5 < 3);
+// console.log(5 < 3);
+
+//////////////////////////2. CAS ////////////////////////////
+
+// let deklaracija; // deklaracija (formiranje varijable)
+
+// deklaracija = 83; // inicijalizacija (dodeljivanje vrednosti varijabli)
+
+// 5 == "5";
+// 5 !== 5;
+
+// const aldin = prompt("Unesi broj godina :)");
+
+// // alert("Ne moze nista da se unese :(");
+
+// console.log(aldin);
+
+// CONDITIONALS (IF, TERNARY, SWITCH/CASE)
+
+// const brojGodina = prompt("Unesite vase godine");
+
+// console.log(brojGodina);
+
+//  IF CONDITIONAL
+// if (brojGodina < 18) {
+//   alert("Ne mozete da udjete!");
+// } else if (Number(brojGodina) === 18) {
+//   alert("Na granici ste, ovaj put moze !");
+// } else {
+//   alert("Izvolite !");
+// }
+
+// TERNARY CONDITIONAL
+// brojGodina < 18 ? alert("Niste punoletni") : alert("Punoletni ste :)"); // ternary operator
+
+// SWITCH/CASE
+
+// switch (+brojGodina) {
+//   case 5:
+//     alert("Odlican, 5!");
+//     break;
+//   case 4:
+//     alert("Vrlo dobar, 4!");
+//     break;
+//   case 3:
+//     alert("Dobar, 3.");
+//     break;
+//   case 2:
+//     alert("Dovoljan, 2!");
+//     break;
+//   case 1:
+//     alert("Nedovoljan, Avgust :)");
+//     break;
+
+//   default:
+//     alert("Niste radili test! || Greska pri unosu");
+//     break;
+// }
+
+// console.log(5 % 2);
+
+// const randomNumber = prompt("Unesite neki broj");
+
+// randomNumber % 2 ? alert("Broj je paran") : alert("Broj je neparan");
+
+// const ime = prompt("Unesite vase ime");
+
+// const prezime = prompt("Unesite vase prezime");
+
+// if (!ime || !prezime) {
+//   alert("Unesite opet vase ime i prezime");
+// } else if (ime) {
+//   alert("Ima samo ime " + ime);
+// } else if (prezime) {
+//   alert("Ima samo prezime " + prezime);
+// } else {
+//   console.log(ime + " " + prezime);
+// }
+
+//////////////////////////////////////////////////////////
