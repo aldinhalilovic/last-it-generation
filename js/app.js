@@ -237,11 +237,54 @@ const d = "aldin";
 //   i++;
 // }
 
-const randomNumber = Math.floor(Math.random() * 20);
-let myNumber = prompt("Guess the number from 0 to 20 :)");
+// const randomNumber = Math.floor(Math.random() * 20);
+// let myNumber = prompt("Guess the number from 0 to 20 :)");
 
-while (+myNumber !== randomNumber) {
-  myNumber = prompt("Guess again");
+// while (+myNumber !== randomNumber) {
+//   myNumber = prompt("Guess again");
+// }
+
+// alert("U are correct, number is: " + randomNumber);
+
+//////////////////////////////////////////////////////
+
+// loop practices;
+
+// practice
+
+// const brojBrojeva = +prompt("Unesite broj brojeva :)");
+// let rezultat = 1;
+
+// for (let i = 0; i < brojBrojeva; i++) {
+//   const unetiBroj = +prompt("Unesite vas broj");
+//   rezultat *= unetiBroj; // rezultat = rezultat * unetiBroj
+// }
+
+// alert("Ovo je rezultat " + rezultat);
+
+// Template strings
+
+let mojeIme = "Aldin";
+
+// console.log("Moje ime je " + mojeIme, "i prezivam se Halilovic");
+console.log(`Moje ime je ${mojeIme}`);
+
+// moje_ime; //snake case
+// mojeIme; //cammel case
+
+let jedanBroj = 10;
+
+jedanBroj += 25; // += ->   jedanBroj = jedanBroj + 25; -= *=
+console.log(jedanBroj);
+
+for (let i = 0; i < 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log(i, "FIZZBUZZ");
+  } else if (i % 5 === 0) {
+    console.log("BUZZ");
+  } else if (i % 3 === 0) {
+    console.log("fizz");
+  } else {
+    console.log(i);
+  }
 }
-
-alert("U are correct, number is: " + randomNumber);
