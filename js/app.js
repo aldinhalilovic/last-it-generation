@@ -267,7 +267,7 @@ const d = "aldin";
 let mojeIme = "Aldin";
 
 // console.log("Moje ime je " + mojeIme, "i prezivam se Halilovic");
-console.log(`Moje ime je ${mojeIme}`);
+// console.log(`Moje ime je ${mojeIme}`);
 
 // moje_ime; //snake case
 // mojeIme; //cammel case
@@ -275,16 +275,79 @@ console.log(`Moje ime je ${mojeIme}`);
 let jedanBroj = 10;
 
 jedanBroj += 25; // += ->   jedanBroj = jedanBroj + 25; -= *=
-console.log(jedanBroj);
+// console.log(jedanBroj);
+
+// for (let i = 0; i < 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log(i, "FIZZBUZZ");
+//   } else if (i % 5 === 0) {
+//     console.log("BUZZ");
+//   } else if (i % 3 === 0) {
+//     console.log("fizz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+/////////////////////////FUNCTIONS/////////////////////////////
+
+// function myFunction() {
+//   console.log("Moja prva funkcija");
+// }
+// myFunction();
+
+// function addTwo() {
+//   console.log(2 + 2);
+// }
+
+// function addThree() {
+//   console.log(3 + 3);
+// }
+// addTwo();
+// addThree();
+
+function additionNumbers(a, b) {
+  const rezulat = a + b;
+
+  const proizvod = rezulat * 10;
+
+  const kolicnik = proizvod / 5;
+
+  return kolicnik;
+}
+
+const sumOfTwo = additionNumbers(5, 10);
+
+// console.log(additionNumbers(5, 10));
+
+// console.log(sumOfTwo);
+// console.log(sumOfTwo * 4);
+
+function oddNumber(number) {
+  // if (number % 2 === 0) {
+  //   return `Ovaj broj je ${number} paran`;
+  // } else {
+  //   return `Ovaj broj je ${number} neparan`;
+  // }
+
+  // const odd =
+  //   number % 2 === 0
+  //     ? `Ovaj broj je ${number} paran`
+  //     : `Ovaj broj je ${number} neparan`;
+
+  // return odd;
+
+  return number % 2 === 0
+    ? `Ovaj broj je ${number} paran`
+    : `Ovaj broj je ${number} neparan`;
+}
+
+// console.log(oddNumber(10));
 
 for (let i = 0; i < 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log(i, "FIZZBUZZ");
-  } else if (i % 5 === 0) {
-    console.log("BUZZ");
-  } else if (i % 3 === 0) {
-    console.log("fizz");
-  } else {
-    console.log(i);
-  }
+  // const a = oddNumber(i);
+
+  // console.log(a);
+
+  console.log(oddNumber(i));
 }
