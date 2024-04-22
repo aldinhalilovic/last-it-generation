@@ -264,7 +264,7 @@ const d = "aldin";
 
 // Template strings
 
-let mojeIme = "Aldin";
+// let mojeIme = "Aldin";
 
 // console.log("Moje ime je " + mojeIme, "i prezivam se Halilovic");
 // console.log(`Moje ime je ${mojeIme}`);
@@ -272,9 +272,9 @@ let mojeIme = "Aldin";
 // moje_ime; //snake case
 // mojeIme; //cammel case
 
-let jedanBroj = 10;
+// let jedanBroj = 10;
 
-jedanBroj += 25; // += ->   jedanBroj = jedanBroj + 25; -= *=
+// jedanBroj += 25; // += ->   jedanBroj = jedanBroj + 25; -= *=
 // console.log(jedanBroj);
 
 // for (let i = 0; i < 100; i++) {
@@ -306,48 +306,130 @@ jedanBroj += 25; // += ->   jedanBroj = jedanBroj + 25; -= *=
 // addTwo();
 // addThree();
 
-function additionNumbers(a, b) {
-  const rezulat = a + b;
+// function additionNumbers(a, b) {
+//   const rezulat = a + b;
 
-  const proizvod = rezulat * 10;
+//   const proizvod = rezulat * 10;
 
-  const kolicnik = proizvod / 5;
+//   const kolicnik = proizvod / 5;
 
-  return kolicnik;
-}
+//   return kolicnik;
+// }
 
-const sumOfTwo = additionNumbers(5, 10);
+// const sumOfTwo = additionNumbers(5, 10);
 
 // console.log(additionNumbers(5, 10));
 
 // console.log(sumOfTwo);
 // console.log(sumOfTwo * 4);
 
-function oddNumber(number) {
-  // if (number % 2 === 0) {
-  //   return `Ovaj broj je ${number} paran`;
-  // } else {
-  //   return `Ovaj broj je ${number} neparan`;
-  // }
+// function oddNumber(number) {
+//   // if (number % 2 === 0) {
+//   //   return `Ovaj broj je ${number} paran`;
+//   // } else {
+//   //   return `Ovaj broj je ${number} neparan`;
+//   // }
 
-  // const odd =
-  //   number % 2 === 0
-  //     ? `Ovaj broj je ${number} paran`
-  //     : `Ovaj broj je ${number} neparan`;
+//   // const odd =
+//   //   number % 2 === 0
+//   //     ? `Ovaj broj je ${number} paran`
+//   //     : `Ovaj broj je ${number} neparan`;
 
-  // return odd;
+//   // return odd;
 
-  return number % 2 === 0
-    ? `Ovaj broj je ${number} paran`
-    : `Ovaj broj je ${number} neparan`;
-}
+//   return number % 2 === 0
+//     ? `Ovaj broj je ${number} paran`
+//     : `Ovaj broj je ${number} neparan`;
+// }
 
 // console.log(oddNumber(10));
 
-for (let i = 0; i < 100; i++) {
-  // const a = oddNumber(i);
+// for (let i = 0; i < 100; i++) {
+//   // const a = oddNumber(i);
 
-  // console.log(a);
+//   // console.log(a);
 
-  console.log(oddNumber(i));
+//   console.log(oddNumber(i));
+// }
+
+// function myName(argument) {
+//   return 2;
+// }
+
+// const mojeImeNeko = myName("Halilovic");
+
+// function convertAge(to) {
+//   return to * 7;
+// }
+
+// convertAge(5);
+
+// const dajRandomBroj = Math.random; // i ostatak funckcije;
+
+// const unetiBrojDrugi = prompt("Unesi broj ljudskih godina");
+
+// convertAge(unetiBrojDrugi);
+
+// 5 > 3 ? console.log("tvrdnja je tacna") : console.log("tvrdnja nije tacna");
+
+// if (5 > 3) {
+//   console.log("pet je vece od tri");
+// } else if (5 < 3) {
+//   console.log("pet je manje od tri");
+// } else {
+//   console.log("nesto skroz peto");
+// }
+
+// ocena = 3;
+// switch (ocena) {
+//   case 1:
+//     console.log("nedovoljan");
+//     break;
+//   case 2:
+//     console.log("dovoljan");
+//     break;
+//   case 3:
+//     console.log("dobar");
+//     break;
+//   case 4:
+//     console.log("vrlo dobar");
+//     break;
+//   case 5:
+//     console.log("odlican");
+//     break;
+
+//   default:
+//     console.log("nije radio test");
+//     break;
+// }
+
+// for (i = 0; i < 20; i++) {
+//   console.log(i);
+// }
+
+// for (i = 100; i > 0; i--) {
+//   console.log(i);
+// }
+
+function myFirstFunction(broj) {
+  return broj * broj;
 }
+
+const nekaDrugaFunkcija = function (argument) {
+  console.log(argument);
+};
+
+const arrowFunction = () => {
+  console.log("arrow funcion");
+};
+
+const squareNum = (broj) => broj * broj;
+
+const rezultat = myFirstFunction(25);
+
+console.log(rezultat);
+nekaDrugaFunkcija(13);
+arrowFunction();
+
+const arrowResult = squareNum(10);
+console.log(arrowResult);
