@@ -427,9 +427,67 @@ const squareNum = (broj) => broj * broj;
 
 const rezultat = myFirstFunction(25);
 
-console.log(rezultat);
-nekaDrugaFunkcija(13);
-arrowFunction();
+// console.log(rezultat);
+// nekaDrugaFunkcija(13);
+// arrowFunction();
 
 const arrowResult = squareNum(10);
-console.log(arrowResult);
+// console.log(arrowResult);
+
+// const emptyArray = [];
+
+// emptyArray.push(10);
+
+// emptyArray.pop();
+
+// emptyArray.unshift("aldin");
+// emptyArray.shift();
+
+const firstMapArray = [9, 7, 30, 93, 13];
+
+const mappedArray = firstMapArray.map((el) => el * el);
+
+console.log(firstMapArray);
+console.log(mappedArray);
+
+function numOnPow(broj) {
+  return broj * broj;
+}
+
+function ourCustomMap(nekiNiz, callBackFn) {
+  const prazanNiz = [];
+
+  for (let i = 0; i < nekiNiz.length; i++) {
+    // prazanNiz.push(callBackFn(nekiNiz[i]));
+    if (callBackFn(nekiNiz[i])) {
+      prazanNiz.push(nekiNiz[i]);
+    }
+  }
+
+  return prazanNiz;
+}
+
+const customMapArray = ourCustomMap(firstMapArray, numOnPow);
+console.log(customMapArray);
+
+// FILTER METHOD
+
+const firstFilterArray = [13, 7, 10, 17, 8, 22, 23, 16];
+
+const evenNumbers = firstFilterArray.filter((el) => el % 2 === 0 && el > 10);
+
+console.log(evenNumbers);
+
+const nizReci = [
+  "laptop",
+  "fudbal",
+  "piljara",
+  "monitor",
+  "ranac",
+  "kroasan",
+  "mis",
+  "kuciste",
+];
+
+//1. da se vrate sve reci koje imaju drugo slovo 'u'
+// 2. da se vrate sve reci koje su duze od 6 slova
