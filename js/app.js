@@ -447,8 +447,8 @@ const firstMapArray = [9, 7, 30, 93, 13];
 
 const mappedArray = firstMapArray.map((el) => el * el);
 
-console.log(firstMapArray);
-console.log(mappedArray);
+// console.log(firstMapArray);
+// console.log(mappedArray);
 
 function numOnPow(broj) {
   return broj * broj;
@@ -458,17 +458,18 @@ function ourCustomMap(nekiNiz, callBackFn) {
   const prazanNiz = [];
 
   for (let i = 0; i < nekiNiz.length; i++) {
-    // prazanNiz.push(callBackFn(nekiNiz[i]));
-    if (callBackFn(nekiNiz[i])) {
-      prazanNiz.push(nekiNiz[i]);
-    }
+    prazanNiz.push(callBackFn(nekiNiz[i]));
+    // filter
+    // if (callBackFn(nekiNiz[i])) {
+    //   prazanNiz.push(nekiNiz[i]);
+    // }
   }
 
   return prazanNiz;
 }
 
 const customMapArray = ourCustomMap(firstMapArray, numOnPow);
-console.log(customMapArray);
+// console.log(customMapArray);
 
 // FILTER METHOD
 
@@ -476,7 +477,7 @@ const firstFilterArray = [13, 7, 10, 17, 8, 22, 23, 16];
 
 const evenNumbers = firstFilterArray.filter((el) => el % 2 === 0 && el > 10);
 
-console.log(evenNumbers);
+// console.log(evenNumbers);
 
 const nizReci = [
   "laptop",
@@ -491,3 +492,75 @@ const nizReci = [
 
 //1. da se vrate sve reci koje imaju drugo slovo 'u'
 // 2. da se vrate sve reci koje su duze od 6 slova
+
+const nekaVarijabla = [13, 3, 10, 92, 22, 56, 100];
+
+// const novaVarijabla = nekaVarijabla.map((el) => {
+//   if (el % 2 !== 0) {
+//     return el * el;
+//   }
+
+//   return el;
+// });
+
+// const handleFilter = (el) => {
+//   const pomnozenBrojSaTri = el * 3;
+
+//   return pomnozenBrojSaTri % 2 !== 0;
+// };
+
+// const novaVarijabla = nekaVarijabla.filter(handleFilter);
+
+// console.log(novaVarijabla);
+
+// 1. Zadatak
+// Prvi deo. Napraviti pomocni niz koji ce sadrzati elemente od oba niza.
+// Drugi deo. Napraviti jos jedan pomocni niz koji ce iz prvog dodatnog niza uzeti parne brojeve.
+// Treci deo. U drugom pomocnom nizu umetnuti na prva dva mesta 10 i 20.
+// Funkcija na kraju treba da vrati dva napravljena pomocna niza.
+
+const DATA1 = [2, 26, 38, 75, 11, 29];
+const DATA2 = ["a", "b", "c", "d", "e"];
+
+// const uslovUMap = DATA1.map((el) => el % 2 === 0);
+
+// console.log(uslovUMap);
+
+const nekiNizNebitan = [10, 19, 28, 63, 100];
+
+const noviNizOdFiltera = nekiNizNebitan.filter(function (el) {
+  return el % 2 === 0;
+});
+
+const prviPrimerNiza = [10, 23, 26, 31, 2, 7, 27, 59, 13];
+
+// let suma = 0;
+// for (let i = 0; i < prviPrimerNiza.length; i++) {
+//   suma += prviPrimerNiza[i];
+// }
+
+// console.log(suma);
+// 2684
+
+console.log(prviPrimerNiza);
+// const suma = prviPrimerNiza.reduce((prev, curr) => {
+//   console.log(prev, "prevvvvvvv value");
+//   console.log(curr, "current value");
+//   return prev + curr;
+// }, 1000);
+
+const suma = prviPrimerNiza.reduce((prev, curr) => {
+  console.log(prev, "prevvvvvvv value");
+  console.log(curr, "current value");
+  // return prev + curr;
+
+  if (prev % 2 === 0) {
+    return curr + prev + 5;
+  } else {
+    return (curr + prev) * 5;
+  }
+});
+
+// console.log(suma);
+
+const godineOdeljenja = [17, 17, 17, 20, 21, 17, 20, 17, 13, 13, 21, 15];
