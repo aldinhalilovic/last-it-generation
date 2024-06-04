@@ -542,7 +542,7 @@ const prviPrimerNiza = [10, 23, 26, 31, 2, 7, 27, 59, 13];
 // console.log(suma);
 // 2684
 
-console.log(prviPrimerNiza);
+// console.log(prviPrimerNiza);
 // const suma = prviPrimerNiza.reduce((prev, curr) => {
 //   console.log(prev, "prevvvvvvv value");
 //   console.log(curr, "current value");
@@ -550,8 +550,8 @@ console.log(prviPrimerNiza);
 // }, 1000);
 
 const suma = prviPrimerNiza.reduce((prev, curr) => {
-  console.log(prev, "prevvvvvvv value");
-  console.log(curr, "current value");
+  // console.log(prev, "prevvvvvvv value");
+  // console.log(curr, "current value");
   // return prev + curr;
 
   if (prev % 2 === 0) {
@@ -564,3 +564,99 @@ const suma = prviPrimerNiza.reduce((prev, curr) => {
 // console.log(suma);
 
 const godineOdeljenja = [17, 17, 17, 20, 21, 17, 20, 17, 13, 13, 21, 15];
+
+const prosekGodina =
+  godineOdeljenja.reduce((prev, curr) => prev + curr) / godineOdeljenja.length;
+
+// console.log(godineOdeljenja);
+// console.log(prosekGodina, "prosek godina");
+
+function calculateAvarageYear(nekiNizBrojeva) {
+  let suma = 0;
+
+  for (let i = 0; i < nekiNizBrojeva.length; i++) {
+    suma += nekiNizBrojeva[i];
+  }
+
+  return suma / nekiNizBrojeva.length;
+}
+
+const nekiBrojevi = [13, 10, 23, 1007, 22, 3, 17, 12321, 2];
+
+const kilometri = nekiBrojevi.map((el) => el * 1.6);
+
+// console.log(nekiBrojevi);
+// console.log(kilometri);
+
+const prosekKilometara =
+  (nekiBrojevi.reduce((prev, curr) => prev + curr) * 1.6) / nekiBrojevi.length;
+
+// console.log(prosekKilometara);
+
+///////////// OBJEKTI ///////////////////////////
+
+const ja = {
+  // ime: "Aldin",
+  ime: "",
+  prezime: "Halilovic",
+  godina: 21,
+  itZnanje: ["HTML", "CSS", "JS", "REACT", "REACT NATIVE", "......."],
+  grupa: {
+    brojClanova: 12,
+    dobri: false,
+    // dobri: true,
+    odrasli: ["Adem", "Lamija", "Ajsa", "Nejla", "Armina"],
+  },
+};
+
+console.log(ja);
+
+// DOT NOTATION
+const mojeIme = ja.ime;
+
+// console.log(mojeIme);
+
+const mojePrezime = ja["prezime"];
+// console.log(mojePrezime);
+
+const imeIPrezime = ja.ime + " " + ja.prezime;
+
+// console.log(imeIPrezime);
+
+// console.log("Moje ime je " + ja.ime, "prezivam se ", ja.prezime);
+
+const osobina = "ime";
+
+// ja.osobina;
+
+// const ja = {
+//   ime: "Aldin",
+//   prezime: "Halilovic",
+//   godina: 21,
+//   itZnanje: ["HTML", "CSS", "JS", "REACT", "REACT NATIVE", "......."],
+//   grupa: {
+//     brojClanova: 12,
+//     dobri: true,
+//     odrasli: ["Adem", "Lamija", "Ajsa", "Nejla", "Armina"],
+//   },
+// };
+
+// console.log(ja.itZnanje[2]);
+
+// for (let i = 0; i < ja.itZnanje.length; i++) {
+//   console.log(ja.itZnanje[i]);
+// }
+
+console.log(ja.grupa.dobri);
+
+if (ja.grupa.dobri) {
+  console.log("Moja grupa je dobra");
+} else {
+  console.log("moja grupa ne valja");
+}
+
+if (ja.ime) {
+  console.log("Zovem se ", ja.ime);
+} else {
+  console.log("Nemam ime, bezimen");
+}
