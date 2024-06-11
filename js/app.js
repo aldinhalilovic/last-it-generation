@@ -609,7 +609,7 @@ const ja = {
   },
 };
 
-console.log(ja);
+// console.log(ja);
 
 // DOT NOTATION
 const mojeIme = ja.ime;
@@ -647,16 +647,202 @@ const osobina = "ime";
 //   console.log(ja.itZnanje[i]);
 // }
 
-console.log(ja.grupa.dobri);
+// console.log(ja.grupa.dobri);
 
-if (ja.grupa.dobri) {
-  console.log("Moja grupa je dobra");
-} else {
-  console.log("moja grupa ne valja");
+// if (ja.grupa.dobri) {
+//   console.log("Moja grupa je dobra");
+// } else {
+//   console.log("moja grupa ne valja");
+// }
+
+// if (ja.ime) {
+//   console.log("Zovem se ", ja.ime);
+// } else {
+//   console.log("Nemam ime, bezimen");
+// }
+
+const noviObjekat = {
+  marka: "Lenovo",
+  model: "Thinkpad",
+  ram: 16,
+  procesor: "I7",
+  graficka: "Integrisana",
+  nov: false,
+  touchScreen: true,
+  portovi: ["USB", "HDMI", "3.5mm", "SD kartica"],
+  cena: {
+    iznos: 52000,
+    valuta: "RSD",
+    pdv: false,
+  },
+};
+
+// console.log(noviObjekat.portovi[3]);
+// console.log(noviObjekat["portovi"][2]);
+// console.log(noviObjekat.cena.pdv);
+// // noviObjekat.cena.push(popust, 20);
+// noviObjekat.cena.popust = 20;
+
+// console.log(noviObjekat);
+
+const kljucevi = Object.keys(noviObjekat);
+const vrednosti = Object.values(noviObjekat);
+// console.log(kljucevi);
+// console.log(vrednosti);
+
+const mojaAdresa = {
+  country: "Srbija",
+  city: "Novi Pazar",
+  street: "1. Maj",
+  number: 73,
+};
+
+// const adrese = Object.values(mojaAdresa);
+
+// // console.log(adrese);
+
+// let mojeAdrese = "Trenutno se nalazim:";
+
+// for (let i = 0; i < adrese.length; i++) {
+//   mojeAdrese += ` ${adrese[i]}`;
+// }
+// console.log(mojeAdrese);
+
+const svasta = Object.entries(mojaAdresa);
+
+// console.log(svasta);
+
+let novaAdresa = "My address is : \n";
+
+// for (let i = 0; i < svasta.length; i++) {
+//   novaAdresa += ` \n${svasta[i][0]}: ${svasta[i][1]}`;
+// }
+
+svasta.forEach((el) => (novaAdresa += `\n${el[0]}: ${el[1]}`));
+
+// console.log(novaAdresa);
+
+const randomBrojevi = [13, 10, 12, 1, 5, 56, 127, 0, 17, 1993, 834];
+
+const noviUseri = [...randomBrojevi, 2, 4, 1021837];
+
+// console.log(noviUseri);
+
+const noviObjekatZaSpredovanje = {
+  ime: "Aldin",
+  prezime: "Halilovic",
+  brojGodina: 21,
+};
+
+const najnovijiObjekat = {
+  ...noviObjekatZaSpredovanje,
+  brojGodina: 22,
+  vozackiIspit: true,
+};
+
+const adem = {
+  ...noviObjekatZaSpredovanje,
+  polozenDiplomski: true,
+  posao: true,
+};
+
+const hamza = {
+  ...noviObjekatZaSpredovanje,
+  josSrednjaSkola: true,
+  vozackiIspit: false,
+};
+
+// console.log(najnovijiObjekat);
+
+// console.log(adem);
+// console.log(hamza);
+
+const nizObjekata = [
+  { ime: "aldin", prezime: "halilovic" },
+  { ime: "ali", prezime: "korac" },
+];
+
+const nekiNoviObjekat = {
+  marka: "Lenovo",
+  model: "Thinkpad",
+  ram: 16,
+  procesor: "I7",
+  graficka: "Integrisana",
+  nov: false,
+  touchScreen: true,
+  portovi: ["USB", "HDMI", "3.5mm", "SD kartica"],
+  cena: {
+    iznos: 52000,
+    valuta: "RSD",
+    pdv: false,
+  },
+};
+const kljuceviNeki = Object.keys(nekiNoviObjekat);
+const vrednostiNeke = Object.values(nekiNoviObjekat);
+const entriesNeki = Object.entries(nekiNoviObjekat);
+
+// console.log(nekiNoviObjekat);
+// console.log(kljuceviNeki);
+// console.log(vrednostiNeke);
+// console.log(entriesNeki);
+
+const hamzinObjekat = {
+  ime: "Hamza",
+  prezime: "Krkmisevic",
+  godine: 17,
+  // ulaz: function () {
+  //   console.log(this.skola.ocene);
+  // },
+  skola: {
+    ocene: "lose",
+    izostanci: "jos gori",
+    // imeMoje: function () {
+    //   console.log(this.ime);
+    // },
+  },
+};
+
+// console.log(noviThisObjekat);
+// hamzinObjekat.ulaz();
+
+// function amIAdult() {
+//   console.log(this);
+//   if (this.godine >= 18) {
+//     console.log("Punoletan");
+//   } else if (this.godine < 18) {
+//     console.log("Mali je jos uvek");
+//   }
+// }
+
+const ime = {
+  torba: "Lenovo",
+  boja: "siva",
+  velicina: "M",
+};
+
+function myBag(velicina, boja, bojabojabojaboja) {
+  console.log(
+    `Moja torba je ${this.velicina} velicine, a voleo bih da bude ${velicina} velicine i da bude ${boja} boja`
+  );
 }
 
-if (ja.ime) {
-  console.log("Zovem se ", ja.ime);
-} else {
-  console.log("Nemam ime, bezimen");
+// myBag("S");
+// myBag.call(ime, "S", "crvena");
+// myBag.apply(ime, ["L", "plava"]);
+
+const nekaBindFunkcija = myBag.bind(ime);
+
+// nekaBindFunkcija("XL", "zuta");
+
+var randomRec = "predavanje";
+
+function nebitnaFunkcija() {
+  let randomRec = "nesto";
+  console.log(randomRec);
 }
+
+function nekaPetaFunckija() {
+  console.log(randomRec);
+}
+
+nekaPetaFunckija();
