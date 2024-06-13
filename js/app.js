@@ -834,15 +834,64 @@ const nekaBindFunkcija = myBag.bind(ime);
 
 // nekaBindFunkcija("XL", "zuta");
 
-var randomRec = "predavanje";
+// var randomRec = "predavanje";
 
-function nebitnaFunkcija() {
-  let randomRec = "nesto";
-  console.log(randomRec);
+// function nebitnaFunkcija() {
+//   let randomRec = "nesto";
+//   console.log(randomRec);
+// }
+
+// function nekaPetaFunckija() {
+//   console.log(randomRec);
+// }
+
+// nekaPetaFunckija();
+
+// var amin;
+
+// console.log(amin);
+
+// amin = "neka rec";
+
+// console.log(amin);
+
+// console.log(ali);
+
+// let ali = "jafa";
+
+// const maid = "cips";
+
+// console.log(maid);
+
+// sayHello();
+
+// let sayHello = () => {
+//   console.log("Hello world");
+// };
+
+const nasaPrvaProdavnica = [
+  { brand: "Nike", model: "TN", broj: 42, cena: 24000, valuta: "RSD" },
+  { brand: "Nike", model: "Jordan 4", broj: 41, cena: 25000, valuta: "RSD" },
+  { brand: "Replay", model: "NN", broj: 42, cena: 18500, valuta: "RSD" },
+  { brand: "Adidas", model: "Campus", broj: 39, cena: 14000, valuta: "RSD" },
+  { brand: "Adidas", model: "Adi 2000", broj: 41, cena: 12500, valuta: "RSD" },
+  {
+    brand: "Nike",
+    model: "SB Dunk Avocado",
+    broj: 39,
+    cena: 9000,
+    valuta: "RSD",
+  },
+];
+
+const nikePatike = nasaPrvaProdavnica.filter((el) => el.brand === "Nike");
+
+const noveNikePatike = [];
+
+for (let i = 0; i < nasaPrvaProdavnica.length; i++) {
+  if (nasaPrvaProdavnica[i].brand === "Nike") {
+    noveNikePatike.push(nasaPrvaProdavnica[i]);
+  }
 }
 
-function nekaPetaFunckija() {
-  console.log(randomRec);
-}
-
-nekaPetaFunckija();
+console.log(noveNikePatike);
