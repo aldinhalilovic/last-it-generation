@@ -869,18 +869,95 @@ const nekaBindFunkcija = myBag.bind(ime);
 //   console.log("Hello world");
 // };
 
+// JEDNA NIZ DA SADRZI SVE NIKE PATIKE
+// DRUGI NIZ DA SADRZI SVE ADIDAS PATIKE
+// TRECI NIZ DA SADRZI SVE NIKE PATIKE ISPOD 15000 RSD
+// CEVTRTI NIZ DA SADRZI SVE ADIDAS PATIKE ISPOD 10000 RSD
+// PETI NIZ DA SADRZI NIKE PATIKE DO BROJA 42
+// SESTI NIZ DA SADRZI ADIDAS PATIKE DO BROJA 42
+// SEDMI NIZ DA SADRZI SVE MUSKE ADIDAS PATIKE
+// OSMI NIZ DA SADRZI SVE ZENSKE ADIDAS PATIKE
+
 const nasaPrvaProdavnica = [
-  { brand: "Nike", model: "TN", broj: 42, cena: 24000, valuta: "RSD" },
-  { brand: "Nike", model: "Jordan 4", broj: 41, cena: 25000, valuta: "RSD" },
-  { brand: "Replay", model: "NN", broj: 42, cena: 18500, valuta: "RSD" },
-  { brand: "Adidas", model: "Campus", broj: 39, cena: 14000, valuta: "RSD" },
-  { brand: "Adidas", model: "Adi 2000", broj: 41, cena: 12500, valuta: "RSD" },
+  {
+    brand: "Nike",
+    model: "TN",
+    broj: 42,
+    cena: 24000,
+    valuta: "RSD",
+    pol: "M",
+  },
+  {
+    brand: "Nike",
+    model: "Jordan 4",
+    broj: 41,
+    cena: 25000,
+    valuta: "RSD",
+    pol: "Z",
+  },
+  {
+    brand: "Replay",
+    model: "NN",
+    broj: 42,
+    cena: 18500,
+    valuta: "RSD",
+    pol: "M",
+  },
+  {
+    brand: "Adidas",
+    model: "Campus",
+    broj: 39,
+    cena: 14000,
+    valuta: "RSD",
+    pol: "Z",
+  },
+  {
+    brand: "Adidas",
+    model: "Adi 2000",
+    broj: 41,
+    cena: 12500,
+    valuta: "RSD",
+    pol: "M",
+  },
   {
     brand: "Nike",
     model: "SB Dunk Avocado",
     broj: 39,
     cena: 9000,
     valuta: "RSD",
+    pol: "M",
+  },
+  {
+    brand: "Adidas",
+    model: "Ozweego",
+    broj: 41,
+    cena: 12500,
+    valuta: "RSD",
+    pol: "Z",
+  },
+  {
+    brand: "Nike",
+    model: "Air force 1",
+    broj: 45,
+    cena: 15000,
+    valuta: "RSD",
+    pol: "M",
+  },
+  {
+    brand: "Adidas",
+    model: "Superstar",
+    broj: 39,
+    cena: 9000,
+    valuta: "RSD",
+    pol: "Z",
+  },
+  {
+    brand: "Nike",
+    model: "Air Max",
+    broj: 43,
+    cena: 12500,
+    valuta: "RSD",
+    pol: "M",
   },
 ];
 
