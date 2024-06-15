@@ -872,11 +872,19 @@ const nekaBindFunkcija = myBag.bind(ime);
 // JEDNA NIZ DA SADRZI SVE NIKE PATIKE
 // DRUGI NIZ DA SADRZI SVE ADIDAS PATIKE
 // TRECI NIZ DA SADRZI SVE NIKE PATIKE ISPOD 15000 RSD
-// CEVTRTI NIZ DA SADRZI SVE ADIDAS PATIKE ISPOD 10000 RSD
 // PETI NIZ DA SADRZI NIKE PATIKE DO BROJA 42
 // SESTI NIZ DA SADRZI ADIDAS PATIKE DO BROJA 42
 // SEDMI NIZ DA SADRZI SVE MUSKE ADIDAS PATIKE
-// OSMI NIZ DA SADRZI SVE ZENSKE ADIDAS PATIKE
+
+// const noveNikePatike = [];
+
+// for (let i = 0; i < nasaPrvaProdavnica.length; i++) {
+//   if (nasaPrvaProdavnica[i].brand === "Nike") {
+//     noveNikePatike.push(nasaPrvaProdavnica[i]);
+//   }
+// }
+
+// console.log(noveNikePatike);
 
 const nasaPrvaProdavnica = [
   {
@@ -963,12 +971,63 @@ const nasaPrvaProdavnica = [
 
 const nikePatike = nasaPrvaProdavnica.filter((el) => el.brand === "Nike");
 
-const noveNikePatike = [];
+// OSMI NIZ DA SADRZI SVE ZENSKE ADIDAS PATIKE
 
-for (let i = 0; i < nasaPrvaProdavnica.length; i++) {
-  if (nasaPrvaProdavnica[i].brand === "Nike") {
-    noveNikePatike.push(nasaPrvaProdavnica[i]);
+const sveZenskePatike = nasaPrvaProdavnica.filter(
+  (patike) => patike.pol === "Z" && patike.brand === "Adidas"
+);
+
+// CEVTRTI NIZ DA SADRZI SVE ADIDAS PATIKE ISPOD 10000 RSD
+
+// const adidasIspodDesetK = nasaPrvaProdavnica.filter(
+//   (el) => el.brand === "Adidas" && el.cena < 10000
+// );
+
+// console.log(adidasIspodDesetK);
+
+const profili = [
+  {
+    ime: "Aldin",
+    prezime: "Halilovic",
+  },
+  {
+    ime: "Hamza",
+    prezime: "Krkmisevic",
+  },
+  {
+    ime: "Amin",
+    prezime: "Gusinac",
+  },
+  {
+    ime: "Lejla",
+    prezime: "Pruzljanin",
+  },
+  { ime: "Armina", prezime: "Zejnelovic" },
+];
+
+const noviProfili = profili.map((el) => {
+  return {
+    full_name: `${el.ime} ${el.prezime}`,
+  };
+});
+
+const noviArtikli = nasaPrvaProdavnica.map((patike) => {
+  // // dodavanje svim artiklima znizenje property
+  // return {
+  //   ...patike,
+  //   snizenje: patike.cena < 15000,
+  // };
+
+  // // dodavanje samo artiklima koji su ispod 15000
+  if (patike.cena < 15000) {
+    return {
+      ...patike,
+      snizenje: true,
+    };
+  } else {
+    return patike;
   }
-}
+});
 
-console.log(noveNikePatike);
+console.log(nasaPrvaProdavnica);
+console.log(noviArtikli);
