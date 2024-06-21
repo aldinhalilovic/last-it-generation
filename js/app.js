@@ -1153,7 +1153,7 @@ const ratings = watchList.map((movie) => +movie.imdbRating);
 // console.log(ratings);
 
 const sumRatings = watchList.reduce((prev, curr) => {
-  console.log(prev);
+  // console.log(prev);
   return prev + +curr.imdbRating;
 }, 0);
 
@@ -1161,4 +1161,90 @@ const sumRatings = watchList.reduce((prev, curr) => {
 
 const lessThenSomething = watchList.filter((movie) => movie.Year < 2010);
 
-console.log(lessThenSomething);
+// console.log(lessThenSomething);
+
+const ademovaVarijabla = {
+  ime: "Adem",
+  prezime: "Mulic",
+  godine: 31,
+};
+
+const saidovaVarijabla = {
+  ime: "Said",
+  prezime: "Mecinovic",
+  godina: 17,
+};
+
+const ajsinaVarijabla = {
+  ime: "Ajsa",
+  prezime: "Tahirovic",
+  godina: 20,
+};
+
+const nejlinaVarijabla = {
+  ime: "Nejla",
+  prezime: "Tobdziu",
+  godina: 20,
+};
+
+// ime, prezime, godina
+
+function createPerson(ime, prezime, godina) {
+  return {
+    ime,
+    prezime,
+    godina,
+  };
+}
+// class Person
+// class Bus
+const Person = class {
+  ime;
+  prezime;
+  godina;
+  #pol = "nepoznato";
+
+  static adresa = "Novi Pazar";
+
+  constructor(ime, prezime, godina) {
+    this.ime = ime;
+    this.prezime = prezime;
+    this.godina = godina;
+  }
+
+  setAges(noveGodine) {
+    this.godina = noveGodine;
+  }
+
+  getGender() {
+    return this.#pol;
+  }
+
+  getAges() {
+    return this.godina;
+  }
+};
+
+console.log(Person.adresa);
+const aldinovaKlasa = new Person("Aldin", "Halilovic", 21);
+console.log(aldinovaKlasa);
+aldinovaKlasa.setAges(23);
+console.log(aldinovaKlasa);
+const aldinoveGodine = aldinovaKlasa.getAges();
+console.log(aldinoveGodine);
+
+class Bus {
+  seats = 20;
+
+  constructor(ime) {
+    this.ime = ime;
+  }
+
+  getSeats() {
+    return this.seats;
+  }
+
+  setSeats(newSeats) {
+    this.seats = newSeats;
+  }
+}
