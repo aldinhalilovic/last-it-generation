@@ -1145,6 +1145,7 @@ const watchList = [
     imdbVotes: "876,575",
     imdbID: "tt0499549",
     Type: "movie",
+
     Response: "True",
   },
 ];
@@ -1225,13 +1226,13 @@ const Person = class {
   }
 };
 
-console.log(Person.adresa);
+// console.log(Person.adresa);
 const aldinovaKlasa = new Person("Aldin", "Halilovic", 21);
-console.log(aldinovaKlasa);
+// console.log(aldinovaKlasa);
 aldinovaKlasa.setAges(23);
-console.log(aldinovaKlasa);
+// console.log(aldinovaKlasa);
 const aldinoveGodine = aldinovaKlasa.getAges();
-console.log(aldinoveGodine);
+// console.log(aldinoveGodine);
 
 class Bus {
   seats = 20;
@@ -1248,3 +1249,37 @@ class Bus {
     this.seats = newSeats;
   }
 }
+
+const laptop = {
+  ime: "Lenovo",
+  model: "Thinkpad",
+  ram: 8,
+};
+
+class Laptop {
+  ime;
+  model;
+  ram;
+
+  constructor(imeLaptopa, modelLaptopa, ramLaptopa) {
+    this.ime = imeLaptopa;
+    this.model = modelLaptopa;
+    this.ram = ramLaptopa ? ramLaptopa : 8;
+  }
+}
+
+class Lenovo extends Laptop {
+  constructor(modelLaptopa) {
+    super("Lenovo", modelLaptopa);
+    this.cdRoom = true;
+    this.camera = true;
+  }
+}
+
+// const alijevLaptop = new Laptop("Lenovo", "Thinkpad T420", 163);
+
+// console.log(laptop);
+// console.log(alijevLaptop);
+
+const alijevLenovoLaptop = new Lenovo("T420");
+console.log(alijevLenovoLaptop);
