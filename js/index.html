@@ -3,8 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./app.js" defer></script>
+    <title>Ovo je nas dokument</title>
+    <!-- <script src="./app.js" defer></script> -->
+    <script src="./dom.js" defer></script>
   </head>
-  <body></body>
+  <body style="overflow-x: hidden">
+    <div
+      style="
+        height: 100vh;
+        width: 100vw;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      "
+    >
+      <div
+        style="
+          font-size: 30px;
+          height: 30vh;
+          width: 30vw;
+          background-color: lightblue;
+        "
+        id="blueDiv"
+      >
+        Plavi div
+      </div>
+
+      <div
+        style="
+          font-size: 50px;
+          height: 30vh;
+          width: 30vw;
+          background-color: lightcoral;
+        "
+        class="redDiv"
+        id="blueDiv"
+      >
+        Crveni div
+      </div>
+      <div
+        style="height: 30vh; width: 30vw; background-color: goldenrod"
+        class="yellowDiv"
+      >
+        Zuti div
+      </div>
+    </div>
+  </body>
 </html>

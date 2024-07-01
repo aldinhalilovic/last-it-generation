@@ -194,6 +194,23 @@ const d = "aldin";
 
 /////////////////////// LOOPS ///////////////////////////////////
 
+class UniversityDebt {
+  totalToPay;
+  totalPayed;
+
+  constructor(totalToPay, totalPayed) {
+    this.totalToPay = totalToPay;
+    this.totalPayed = totalPayed;
+  }
+
+  canGoOnExam() {
+    if (this.totalToPay / 2 < this.totalPayed) {
+      return "Can go out on exam,and pass it";
+    } else {
+      return "Can't go out on exam";
+    }
+  }
+}
 // console.log(3);
 // console.log(3);
 // console.log(3);
@@ -1282,4 +1299,32 @@ class Lenovo extends Laptop {
 // console.log(alijevLaptop);
 
 const alijevLenovoLaptop = new Lenovo("T420");
-console.log(alijevLenovoLaptop);
+// console.log(alijevLenovoLaptop);
+
+const aldinovaGodina = new UniversityDebt(60000, 28000);
+
+// console.log(aldinovaGodina.canGoOnExam());
+
+class Classroom {
+  #brojUcenika = 11;
+  #profesor;
+  #kurs;
+
+  constructor(profesorKojiPredaje, kursKojiSePredaje) {
+    this.#profesor = profesorKojiPredaje;
+    this.#kurs = kursKojiSePredaje;
+  }
+
+  getKurs() {
+    return this.#kurs;
+  }
+}
+
+const itKamp = new Classroom("Aldin", "JS");
+
+// console.log(itKamp);
+// console.log(itKamp.getKurs());
+// console.log(itKamp.kurs);
+
+console.log(document);
+console.log(this);
