@@ -1,14 +1,15 @@
 const toDoInput = document.getElementById("todo-input");
 const submitButton = document.querySelector("button");
 const toDoListSection = document.getElementById("todo-list");
+const toDoEditor = document.getElementsByClassName("todo-editor");
 
 const unOrderList = document.createElement("ul");
-
 toDoListSection.appendChild(unOrderList);
 
 let toDoTextValue = "";
 
 toDoInput.addEventListener("keyup", (e) => {
+  console.log(e);
   toDoTextValue = e.target.value;
 });
 
