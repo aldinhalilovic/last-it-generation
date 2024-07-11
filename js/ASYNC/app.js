@@ -109,12 +109,24 @@
 //     }
 //   })
 //   .finally(() => alert("Provera je zavrsena"));
+// fetch("https://dummyjson.com/posts")
+//   .then((res) => res.json())
+//   .then((data) => {
+//     const allPosts = data.posts;
+//     const parniPostovi = allPosts.filter((post) => post.id % 2 === 0);
+//     return parniPostovi;
+//   })
+//   .then((parniPostovi) => console.log(parniPostovi));
+
+// const brojPostova = prompt("Unesite broj postova");
+
+// fetch(`https://dummyjson.com/posts`)
+//   .then((res) => res.json())
+//   .then((data) => data.posts)
+//   .then((posts) => posts.filter((post) => post.id % 2 === 0))
+//   .then(console.log);
+
 fetch("https://dummyjson.com/posts")
   .then((res) => res.json())
-  .then((data) => {
-    const allPosts = data.posts;
-    const parniPostovi = allPosts.filter((post) => post.id % 2 === 0);
-    return parniPostovi;
-  })
-  .then((parniPostovi) => console.log(parniPostovi));
-// .then((data) => console.log(data));
+  .then((data) => data.posts.filter((post) => post.reactions.dislikes < 20))
+  .then(console.log);
