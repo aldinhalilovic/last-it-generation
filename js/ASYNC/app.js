@@ -126,7 +126,44 @@
 //   .then((posts) => posts.filter((post) => post.id % 2 === 0))
 //   .then(console.log);
 
-fetch("https://dummyjson.com/posts")
-  .then((res) => res.json())
-  .then((data) => data.posts.filter((post) => post.reactions.dislikes < 20))
-  .then(console.log);
+// fetch("https://dummyjson.com/posts")
+//   .then((res) => res.json())
+//   .then((data) => data.posts.filter((post) => post.reactions.dislikes < 20))
+//   .then(console.log);
+
+// fetch("https://dummyjson.com/products")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => data.products)
+//   .then((products) => {
+//     const evenIds = products.filter((product) => product.id % 2 === 0);
+//     return evenIds;
+//   })
+//   .then((evenIdProducts) => evenIdProducts.filter((el) => el.stock < 10))
+//   .then(console.log);
+
+const person = {
+  ime: "Aldin",
+  prezime: "Halilovic",
+  godina: 20,
+};
+
+const secondPerson = {
+  ime: "Hamza",
+  prezime: "Krkmisevic",
+  godina: 16,
+};
+
+const { godina: mojeGodine, ime, prezime } = person;
+const {
+  godina: hamzineGodine,
+  ime: hamzinoIme,
+  prezime: hamzinoPrezime,
+} = secondPerson;
+
+console.log(person.godina);
+console.log(mojeGodine);
+
+console.log(prezime);
+console.log(hamzinoPrezime);
